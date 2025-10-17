@@ -1,12 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CareMate - InnovHer</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/App.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareMate — Symptom Checker with Multilingual Chatbot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeSlideIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .fade-slide-in {
+      opacity: 0;
+      animation: fadeSlideIn 1s ease forwards;
+    }
+    .fade-slide-in.delay-1 { animation-delay: 0.2s; }
+    .fade-slide-in.delay-2 { animation-delay: 0.4s; }
+    .fade-slide-in.delay-3 { animation-delay: 0.6s; }
+  </style>
+</head>
+<body class="bg-gray-50 font-poppins">
+
+<header class="bg-gradient-to-r from-teal-500 to-blue-500 text-white p-6 flex flex-wrap justify-between items-center shadow-md fade-slide-in delay-1">
+  <h1 class="text-3xl font-bold flex flex-col">
+    CareMate
+    <span class="text-sm text-teal-100 mt-1">Symptom Checker with Multilingual Chatbot</span>
+  </h1>
+  <nav class="flex flex-wrap gap-2 mt-2 md:mt-0">
+    <button onclick="showSection('home')" class="bg-white/20 px-4 py-2 rounded hover:bg-white hover:text-blue-700 transition">Home</button>
+    <button onclick="showSection('about')" class="bg-white/20 px-4 py-2 rounded hover:bg-white hover:text-blue-700 transition">About</button>
+    <button onclick="showSection('features')" class="bg-white/20 px-4 py-2 rounded hover:bg-white hover:text-blue-700 transition">Features</button>
+    <button onclick="showSection('team')" class="bg-white/20 px-4 py-2 rounded hover:bg-white hover:text-blue-700 transition">Team</button>
+    <button onclick="showSection('chatbot')" class="bg-white/20 px-4 py-2 rounded hover:bg-white hover:text-blue-700 transition">Chatbot</button>
+    <button onclick="showSection('contact')" class="bg-white/20 px-4 py-2 rounded hover:bg-white hover:text-blue-700 transition">Contact</button>
+  </nav>
+</header>
+
+<main class="max-w-6xl mx-auto my-12 px-4">
+
+  <!-- Home -->
+  <section id="home" class="active relative flex flex-col md:flex-row items-center bg-gradient-to-r from-teal-100 to-blue-50 rounded-xl p-8 shadow-lg fade-slide-in delay-1">
+    <div class="md:w-1/2">
+      <h2 class="text-4xl font-bold border-l-4 border-blue-500 pl-3 fade-slide-in delay-2">Welcome to CareMate</h2>
+      <p class="mt-3 text-gray-700 fade-slide-in delay-3">CareMate helps you describe your symptoms in your native Indian language and provides safe, basic healthcare guidance.</p>
+      <ul class="mt-3 list-disc list-inside text-gray-700 space-y-1 fade-slide-in delay-3">
+        <li>🌐 Multilingual Support — Hindi, Marathi, Telugu, Tamil, Bengali, Kannada, Gujarati, English</li>
+        <li>🤖 AI + NLP based symptom understanding</li>
+        <li>🩺 Early awareness and responsible self-care</li>
+      </ul>
+      <button class="mt-4 bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-700 transition fade-slide-in delay-3" onclick="showSection('chatbot')">Try Chatbot Demo</button>
+    </div>
+    <div class="md:w-1/2 mt-6 md:mt-0 flex justify-center fade-slide-in delay-2">
+      <img src="https://images.unsplash.com/photo-1588776814546-1a7f23aa4f66?auto=format&fit=crop&w=400&q=80" alt="Healthcare illustration" class="rounded-xl shadow-lg">
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="hidden mt-10 p-6 bg-white rounded-xl shadow-lg flex flex-col md:flex-row items-center fade-slide-in">
+    <div class="md:w-1/2 fade-slide-in delay-1">
+      <h2 class="text-3xl font-bold border-l-4 border-blue-500 pl-2">About CareMate</h2>
+      <p class="mt-2 text-gray-700">CareMate is a multilingual AI-powered chatbot designed to make healthcare awareness accessible to everyone. Users can describe their symptoms in their native language and receive responsible guidance.</p>
+      <p class="mt-2 text-gray-700">It uses AI and NLP to detect symptoms and provide early advice. While not a substitute for doctors, it helps in self-care and understanding possible health concerns.</p>
+      <p class="mt-2 text-gray-700">Future features include voice input, regional health data integration, and expanding the symptom database for better coverage.</p>
+    </div>
+    <div class="md:w-1/2 mt-6 md:mt-0 flex justify-center fade-slide-in delay-2">
+      <img src="https://images.unsplash.com/photo-1588776814546-1a7f23aa4f66?auto=format&fit=crop&w=400&q=80" alt="AI Healthcare" class="rounded-xl shadow-lg">
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="hidden mt-10 fade-slide-in">
+    <h2 class="text-3xl font-bold border-l-4 border-blue-500 pl-2 fade-slide-in delay-1">Features</h2>
+    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-r from-blue-50 to-teal-50 p-5 rounded-xl shadow hover:scale-105 transition fade-slide-in delay-2">
+        <img src="https://img.icons8.com/color/96/000000/language.png" alt="Multilingual" class="w-12 h-12 mb-3">
+        <p class="font-semibold">Multilingual Input</p>
+        <p class="text-gray-700 mt-1">Accepts text in multiple Indian languages.</p>
+      </div>
+      <div class="bg-gradient-to-r from-blue-50 to-teal-50 p-5 rounded-xl shadow hover:scale-105 transition fade-slide-in delay-2">
+        <img src="https://img.icons8.com/color/96/000000/brain.png" alt="AI NLP" class="w-12 h-12 mb-3">
+        <p class="font-semibold">Symptom Understanding</p>
+        <p class="text-gray-700 mt-1">Uses AI/NLP to detect possible health concerns.</p>
+      </div>
+      <div class="bg-gradient-to-r from-blue-50 to-teal-50 p-5 rounded-xl shadow hover:scale-105 transition fade-slide-in delay-3">
+        <img src="https://img.icons8.com/color/96/000000/heart-with-pulse.png" alt="Safe Guidance" class="w-12 h-12 mb-3">
+        <p class="font-semibold">Safe Guidance</p>
+        <p class="text-gray-700 mt-1">Provides responsible, non-diagnostic advice.</p>
+      </div>
+      <div class="bg-gradient-to-r from-blue-50 to-teal-50 p-5 rounded-xl shadow hover:scale-105 transition fade-slide-in delay-3">
+        <img src="https://img.icons8.com/color/96/000000/idea.png" alt="Future Scope" class="w-12 h-12 mb-3">
+        <p class="font-semibold">Future Scope</p>
+        <p class="text-gray-700 mt-1">Voice input and regional health data integration.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="hidden mt-10 fade-slide-in">
+    <h2 class="text-3xl font-bold border-l-4 border-blue-500 pl-2 fade-slide-in delay-1">Our Team</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+      <div class="bg-white p-6 rounded-xl shadow text-center hover:scale-105 transition-transform fade-slide-in delay-2">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Shravani" class="w-20 h-20 rounded-full mx-auto mb-2 shadow">
+        <p class="mt-2 font-semibold">Shravani Dhuri<br><span class="text-sm font-normal">Team Leader</span></p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow text-center hover:scale-105 transition-transform fade-slide-in delay-2">
+        <img src="https://images.unsplash.com/photo-1531256379413-43c93559a4ab?auto=format&fit=crop&w=200&q=80" alt="Manasvi" class="w-20 h-20 rounded-full mx-auto mb-2 shadow">
+        <p class="mt-2 font-semibold">Manasvi Chauhan<br><span class="text-sm font-normal">Member</span></p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow text-center hover:scale-105 transition-transform fade-slide-in delay-3">
+        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=200&q=80" alt="Shreya" class="w-20 h-20 rounded-full mx-auto mb-2 shadow">
+        <p class="mt-2 font-semibold">Shreya Boda<br><span class="text-sm font-normal">Member</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chatbot -->
+  <section id="chatbot" class="hidden mt-10 fade-slide-in">
+    <h2 class="text-3xl font-bold border-l-4 border-blue-500 pl-2 fade-slide-in delay-1">Chatbot Demo</h2>
+    <label for="language" class="mt-2 block fade-slide-in delay-2">Choose Language:</label>
+    <select id="language" class="w-full p-2 rounded border border-gray-300 mt-1 fade-slide-in delay-2">
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+      <option value="mr">Marathi</option>
+      <option value="te">Telugu</option>
+      <option value="ta">Tamil</option>
+      <option value="bn">Bengali</option>
+      <option value="kn">Kannada</option>
+      <option value="gu">Gujarati</option>
+    </select>
+    <div id="chatbox" class="bg-white h-80 mt-4 p-4 rounded overflow-y-auto border border-gray-300 flex flex-col gap-2 fade-slide-in delay-3"></div>
+    <div class="flex gap-2 mt-2 fade-slide-in delay-3">
+      <input type="text" id="userInput" placeholder="Type your symptom..." class="flex-1 p-2 border rounded"/>
+      <button class="bg-blue-500 text-white px-4 rounded hover:bg-blue-700" onclick="sendMsg()">Send</button>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="hidden mt-10 p-6 bg-white rounded-xl shadow-lg fade-slide-in">
+    <h2 class="text-3xl font-bold border-l-4 border-blue-500 pl-2 fade-slide-in delay-1">Contact Us</h2>
+    <form id="contactForm" class="mt-2 space-y-2 fade-slide-in delay-2">
+      <input type="email" id="userEmail" placeholder="Your Email" required class="w-full p-2 border rounded"/>
+      <textarea id="userMessage" rows="4" placeholder="Your Message" required class="w-full p-2 border rounded"></textarea>
+      <button type="submit" class="bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-700">Send Message</button>
+    </form>
+  </section>
+
+</main>
+
+<footer class="bg-gray-900 text-gray-300 text-center p-4 mt-10 fade-slide-in delay-1">
+  © 2025 CareMate — Symptom Checker with Multilingual Chatbot
+</footer>
+
+<script src="chatbot.js"></script>
+<script>
+function showSection(id) {
+  document.querySelectorAll('main section').forEach(s => s.classList.add('hidden'));
+  const section = document.getElementById(id);
+  section.classList.remove('hidden');
+  section.querySelectorAll('.fade-slide-in').forEach(el => el.style.animation = 'fadeSlideIn 1s ease forwards');
+}
+</script>
+</body>
 </html>
