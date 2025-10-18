@@ -50,9 +50,6 @@
       </ul>
       <button class="mt-4 bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-700 transition fade-slide-in delay-3" onclick="showSection('chatbot')">Try Chatbot Demo</button>
     </div>
-    <div class="md:w-1/2 mt-6 md:mt-0 flex justify-center fade-slide-in delay-2">
-      <img src="https://images.unsplash.com/photo-1588776814546-1a7f23aa4f66?auto=format&fit=crop&w=400&q=80" alt="Healthcare illustration" class="rounded-xl shadow-lg">
-    </div>
   </section>
 
   <!-- About -->
@@ -63,9 +60,6 @@
       <p class="mt-2 text-gray-700">It uses AI and NLP to detect symptoms and provide early advice. While not a substitute for doctors, it helps in self-care and understanding possible health concerns.</p>
       <p class="mt-2 text-gray-700">Future features include voice input, regional health data integration, and expanding the symptom database for better coverage.</p>
     </div>
-    <div class="md:w-1/2 mt-6 md:mt-0 flex justify-center fade-slide-in delay-2">
-      <img src="https://images.unsplash.com/photo-1588776814546-1a7f23aa4f66?auto=format&fit=crop&w=400&q=80" alt="AI Healthcare" class="rounded-xl shadow-lg">
-    </div>
   </section>
 
   <!-- Features -->
@@ -73,22 +67,18 @@
     <h2 class="text-3xl font-bold border-l-4 border-blue-500 pl-2 fade-slide-in delay-1">Features</h2>
     <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
       <div class="bg-gradient-to-r from-blue-50 to-teal-50 p-5 rounded-xl shadow hover:scale-105 transition fade-slide-in delay-2">
-        <img src="https://img.icons8.com/color/96/000000/language.png" alt="Multilingual" class="w-12 h-12 mb-3">
         <p class="font-semibold">Multilingual Input</p>
         <p class="text-gray-700 mt-1">Accepts text in multiple Indian languages.</p>
       </div>
       <div class="bg-gradient-to-r from-blue-50 to-teal-50 p-5 rounded-xl shadow hover:scale-105 transition fade-slide-in delay-2">
-        <img src="https://img.icons8.com/color/96/000000/brain.png" alt="AI NLP" class="w-12 h-12 mb-3">
         <p class="font-semibold">Symptom Understanding</p>
         <p class="text-gray-700 mt-1">Uses AI/NLP to detect possible health concerns.</p>
       </div>
       <div class="bg-gradient-to-r from-blue-50 to-teal-50 p-5 rounded-xl shadow hover:scale-105 transition fade-slide-in delay-3">
-        <img src="https://img.icons8.com/color/96/000000/heart-with-pulse.png" alt="Safe Guidance" class="w-12 h-12 mb-3">
         <p class="font-semibold">Safe Guidance</p>
         <p class="text-gray-700 mt-1">Provides responsible, non-diagnostic advice.</p>
       </div>
       <div class="bg-gradient-to-r from-blue-50 to-teal-50 p-5 rounded-xl shadow hover:scale-105 transition fade-slide-in delay-3">
-        <img src="https://img.icons8.com/color/96/000000/idea.png" alt="Future Scope" class="w-12 h-12 mb-3">
         <p class="font-semibold">Future Scope</p>
         <p class="text-gray-700 mt-1">Voice input and regional health data integration.</p>
       </div>
@@ -96,21 +86,20 @@
   </section>
 
   <!-- Team -->
-<section id="team" class="hidden mt-10 fade-slide-in">
-  <h2 class="text-3xl font-bold border-l-4 border-blue-500 pl-2 fade-slide-in delay-1">Our Team</h2>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
-    <div class="bg-white p-6 rounded-xl shadow text-center hover:scale-105 transition-transform fade-slide-in delay-2">
-      <p class="mt-2 font-semibold">Shravani Dhuri<br><span class="text-sm font-normal">Team Leader</span></p>
+  <section id="team" class="hidden mt-10 fade-slide-in">
+    <h2 class="text-3xl font-bold border-l-4 border-blue-500 pl-2 fade-slide-in delay-1">Our Team</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+      <div class="bg-white p-6 rounded-xl shadow text-center hover:scale-105 transition-transform fade-slide-in delay-2">
+        <p class="mt-2 font-semibold">Shravani Dhuri<br><span class="text-sm font-normal">Team Leader</span></p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow text-center hover:scale-105 transition-transform fade-slide-in delay-2">
+        <p class="mt-2 font-semibold">Manasvi Chauhan<br><span class="text-sm font-normal">Member</span></p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow text-center hover:scale-105 transition-transform fade-slide-in delay-3">
+        <p class="mt-2 font-semibold">Shreya Boda<br><span class="text-sm font-normal">Member</span></p>
+      </div>
     </div>
-    <div class="bg-white p-6 rounded-xl shadow text-center hover:scale-105 transition-transform fade-slide-in delay-2">
-      <p class="mt-2 font-semibold">Manasvi Chauhan<br><span class="text-sm font-normal">Member</span></p>
-    </div>
-    <div class="bg-white p-6 rounded-xl shadow text-center hover:scale-105 transition-transform fade-slide-in delay-3">
-      <p class="mt-2 font-semibold">Shreya Boda<br><span class="text-sm font-normal">Member</span></p>
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Chatbot -->
   <section id="chatbot" class="hidden mt-10 fade-slide-in">
@@ -158,7 +147,6 @@ function showSection(id) {
   section.querySelectorAll('.fade-slide-in').forEach(el => el.style.animation = 'fadeSlideIn 1s ease forwards');
 }
 </script>
+<script id="omnidimension-web-widget" async src="https://backend.omnidim.io/web_widget.js?secret_key=995e8759f01498b316ff1e13fae77f85" ></script>
 </body>
 </html>
-
-<script id="omnidimension-web-widget" async src="https://backend.omnidim.io/web_widget.js?secret_key=995e8759f01498b316ff1e13fae77f85" ></script>
